@@ -33,7 +33,7 @@ def dynamic_data_entry():
 create_table()
 #data_entry()
 
-for i range(10):
+for i in range(10):
     dynamic_data_entry()
     time.sleep(1)
 
