@@ -3,7 +3,7 @@ import time
 import datetime
 import random # to import random values
 
-conn = slqite3.commect('finance.db')
+conn = sqlite3.connect('finance.db')
 
 cur = conn.cursor()
 
@@ -27,7 +27,7 @@ def dynamic_data_entry():
     # ? is for sqlite and %s for mysql
     cur.execute("INSERT INTO payments (unix, datestamp, keyword, value) VALUES(?, ?, ?, ?)",
                 (unix, date, keyword, value))
-    con.commit()
+    conn.commit()
     # we do not have to close the connection everytime we enter in tables
 
 create_table()
